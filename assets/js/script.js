@@ -1,9 +1,9 @@
     //Decalared my Varaibles 
-    var inputLength = document.querySelector('input[name="length"]');
-    var lowerCaseLetter = document.querySelector('input[name="lowercase"]');
-    var upperCaseLetter = document.querySelector('input[name="uppercase"]');
-    var number = document.querySelector('input[name="number"]');
-    var symbol = document.querySelector('input[name="symbol"]');
+    var inputLength = document.querySelector('input[id="length"]');
+    var lowerCaseLetter = document.querySelector('input[id="lowercase"]');
+    var upperCaseLetter = document.querySelector('input[id="uppercase"]');
+    var number = document.querySelector('input[id="number"]');
+    var symbol = document.querySelector('input[id="symbol"]');
     var generatePass = document.querySelector('.wrapper button');
     
  passKeys = {
@@ -49,7 +49,7 @@ function generatePassword(lower, upper, num, sym, length){
     }
     var passwordText = document.querySelector("#password");
     passwordText.value = finalPassword;
-    //document.querySelector('input[type="text"]').value =  finalPassword;
+ 
   }else{
     passwordText.value =  "Select any password option and specify the length";
   }

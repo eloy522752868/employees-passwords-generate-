@@ -13,8 +13,8 @@ body,
 }
 
 body {
-  font-family: sans-serif;
-  background-color: #f9fbfd;
+  font-family: 'Courier New (monospace)', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color:darkgray
 }
 
 .wrapper {
@@ -28,15 +28,18 @@ header {
   padding: 20px;
   padding-top: 0px;
   color: hsl(206, 17%, 28%);
+  font-size: 40px;
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 5px;
-  border-width: 1px;
+  background-color: whitesmoke;
+  border-radius: 30px;
+  border-width: 7px;
+  border-style: solid;
+  border-color: black;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
   color: hsl(206, 17%, 28%);
-  font-size: 18px;
+  font-size: 23px;
   margin: 0 auto;
   max-width: 800px;
   padding: 30px 40px;
@@ -96,7 +99,16 @@ button[disabled] {
 .float-right {
   float: right;
 }
-
+#lengthtip
+{
+  font-style:italic;
+  font-size: 15px;
+  color: lightgray;
+}
+#length {
+  height: 40px;
+  width: 100px;;
+}
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -108,7 +120,7 @@ button[disabled] {
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 85px;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -117,6 +129,7 @@ button[disabled] {
   resize: none;
   overflow: hidden;
 }
+
 
 @media (max-width: 690px) {
   .btn {
