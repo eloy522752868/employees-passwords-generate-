@@ -3,8 +3,8 @@
 * Date: 03/17/2021
 * Description:
  This week’s homework requires me to modify starter code to create an application that enables employees to generate random passwords based on criteria that they’ve selected. 
- This app will run in the browser and will feature dynamically updated HTML and CSS. I was going to use Alerts, prompts and confirm boxes. But after the past week gone bit more on working with API's 
- I worked in what we have practice. I love this Class!!
+ This app will run in the browser and will feature dynamically updated HTML and CSS. I was going to use Alerts, prompts and confirm boxes. 
+ But after the past week what we have learned on working with API's. I worked in what we have practice. I love this Bootcamp!!
 */
 
 /**Decalared Variables
@@ -66,19 +66,27 @@ function generatePassword(lower, upper, num, sym, length)
       ? passKeys[Object.keys(passOptions)[i]]
       : "";
    }
- //randomize the constucted  selectpasskey if selectpasskey is not 0 or length is not 0.
-  if (selectedPassKeys != "" && length > 0)
-  {
-    alert("what the hell")
+  //The below two conditions handle to check that the length entered is at least 8 and no more than 128 as the one of the homework criteria requested.
+ if(length > 0 && length  < 8 )
+ {
+    passwordText.value = "Please select a length of at least 8 characters.";
+ }
+ else if (length > 128 )
+ {
+    passwordText.value = "Please select a length no more than 128 characters.";
+ }
+  //Randomize the constucted  selectpasskey if selectpasskey is not 0 or length is not 0.
+ else if (selectedPassKeys != "" && length > 0)
+ {
     for (i = 0; i < length; i++) 
     {
       finalPassword +=
         selectedPassKeys[Math.floor(Math.random() * selectedPassKeys.length)];
     }
     passwordText.value = finalPassword;
-  } 
-  else
-  {
+ } 
+ else
+ {
     passwordText.value = "Please select any password option and specify the length.";
-  }
+ }
 }
